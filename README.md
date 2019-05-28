@@ -1,6 +1,6 @@
 # byte_data_wrapper
 
-A new Flutter package project.
+I will update the README file latter, sorry! 
 
 ## Getting Started
 
