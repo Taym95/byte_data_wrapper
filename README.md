@@ -1,14 +1,23 @@
 # byte_data_wrapper
 
-I will update the README file latter, sorry! 
+A package to convert you byte data to int(Uint8, Uint16, Uint32, Uint64..)
 
-## Getting Started
+## Usage
+* Add `byte_data_wrapper` to your `pubspec.yaml`file.
+* Example:
 
-This project is a starting point for a Dart
-[package](https://flutter.io/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+```
+import 'dart:typed_data';
+import 'byte_data_wrapper/byte_data_wrapper.dart';
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+// Get the buffer.
+final buffer = Uint16List.fromList(result).buffer;
+
+// Create the byteDataCreator from buffer.
+final byteDataCreator = ByteDataCreator.view(buffer);
+
+// Get your data 
+
+int firstData = byteDataCreator.getUint8();
+int secondData = byteDataCreator.getUint16();
+```

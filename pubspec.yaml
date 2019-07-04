@@ -1,8 +1,8 @@
 name: byte_data_wrapper
 description: A new Flutter package project.
 version: 0.0.1
-author:
-homepage:
+author: haddadi.taym@gmail.com
+homepage: https://github.com/Taym95/byte_data_wrapper
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
