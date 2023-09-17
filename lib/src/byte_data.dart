@@ -5,14 +5,10 @@ class ByteDataWrapper {
   int _writeOffset = 0;
   ByteData byteBuffer;
 
-  ByteDataWrapper(int numBytes) {
-    this.byteBuffer = ByteData(numBytes);
-  }
+  ByteDataWrapper({required int numBytes}) : this.byteBuffer = ByteData(numBytes);
 
-  static ByteDataWrapper view(ByteBuffer buffer,
-      [int offsetInBytes = 0, int length]) {
-    final byteDataWrapper = ByteDataWrapper(0)
-      ..byteBuffer = ByteData.view(buffer, offsetInBytes, length);
+  static ByteDataWrapper view(ByteBuffer buffer, [int offsetInBytes = 0, int length = 0]) {
+    final byteDataWrapper = ByteDataWrapper(numBytes: 0)..byteBuffer = ByteData.view(buffer, offsetInBytes, length);
     return byteDataWrapper;
   }
 
